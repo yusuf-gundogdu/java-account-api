@@ -1,0 +1,26 @@
+{
+  "jhtestApp": {
+    "discountUsage": {
+      "home": {
+        "title": "Discount Usages",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Discount Usage",
+        "createOrEditLabel": "Create or edit a Discount Usage",
+        "notFound": "No Discount Usages found"
+      },
+      "created": "A new Discount Usage is created with identifier {{ param }}",
+      "updated": "A Discount Usage is updated with identifier {{ param }}",
+      "deleted": "A Discount Usage is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Discount Usage {{ id }}?"
+      },
+      "detail": {
+        "title": "Discount Usage"
+      },
+      "id": "Id",
+      "usageDate": "Usage Date",
+      "totalDiscountAmount": "Total Discount Amount",
+      "user": "User"
+    }
+  }
+}

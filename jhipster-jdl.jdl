@@ -1,0 +1,41 @@
+
+entity DiscountUsage {
+  id String,
+  usageDate Instant,
+  totalDiscountAmount Float
+}
+
+entity DiscountLink {
+  id String,
+  discountAmount Float,
+  accountedPrice Float,
+  date Instant
+}
+
+entity UserRating {
+  id String,
+  rating Float,
+  reviewDate Instant
+}
+
+entity Company {
+  id String,
+  name String,
+  address String,
+  rating Float,
+  discountPercentage Float,
+  advertising Boolean,
+  discountActive Boolean
+}
+
+relationship ManyToOne {
+  DiscountUsage{user} to User with builtInEntity,
+  DiscountLink{discountUsage} to DiscountUsage,
+  UserRating{user} to User with builtInEntity,
+  UserRating{company} to Company,
+  DiscountLink{company} to Company
+}
+
+
+paginate * with pagination
+service all with serviceImpl

@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240909201819"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "discountPercentage",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "advertising",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "discountActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Company",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

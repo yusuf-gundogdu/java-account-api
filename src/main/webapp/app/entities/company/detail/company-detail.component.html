@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (company(); as companyRef) {
+      <div>
+        <h2 data-cy="companyDetailsHeading"><span jhiTranslate="jhtestApp.company.detail.title">Company</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="jhtestApp.company.id">Id</span></dt>
+          <dd>
+            <span>{{ companyRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.name">Name</span></dt>
+          <dd>
+            <span>{{ companyRef.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.address">Address</span></dt>
+          <dd>
+            <span>{{ companyRef.address }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.rating">Rating</span></dt>
+          <dd>
+            <span>{{ companyRef.rating }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.discountPercentage">Discount Percentage</span></dt>
+          <dd>
+            <span>{{ companyRef.discountPercentage }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.advertising">Advertising</span></dt>
+          <dd>
+            <span>{{ companyRef.advertising }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.company.discountActive">Discount Active</span></dt>
+          <dd>
+            <span>{{ companyRef.discountActive }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/company', companyRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

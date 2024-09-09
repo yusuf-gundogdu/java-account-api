@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (userRating(); as userRatingRef) {
+      <div>
+        <h2 data-cy="userRatingDetailsHeading"><span jhiTranslate="jhtestApp.userRating.detail.title">User Rating</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="jhtestApp.userRating.id">Id</span></dt>
+          <dd>
+            <span>{{ userRatingRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.userRating.rating">Rating</span></dt>
+          <dd>
+            <span>{{ userRatingRef.rating }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.userRating.reviewDate">Review Date</span></dt>
+          <dd>
+            <span>{{ userRatingRef.reviewDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.userRating.user">User</span></dt>
+          <dd>
+            <span>{{ userRatingRef.user?.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.userRating.company">Company</span></dt>
+          <dd>
+            @if (userRating()!.company) {
+              <div>
+                <a [routerLink]="['/company', userRating()!.company?.id, 'view']">{{ userRatingRef.company?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/user-rating', userRatingRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

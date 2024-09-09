@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (discountUsage(); as discountUsageRef) {
+      <div>
+        <h2 data-cy="discountUsageDetailsHeading"><span jhiTranslate="jhtestApp.discountUsage.detail.title">Discount Usage</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="jhtestApp.discountUsage.id">Id</span></dt>
+          <dd>
+            <span>{{ discountUsageRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountUsage.usageDate">Usage Date</span></dt>
+          <dd>
+            <span>{{ discountUsageRef.usageDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountUsage.totalDiscountAmount">Total Discount Amount</span></dt>
+          <dd>
+            <span>{{ discountUsageRef.totalDiscountAmount }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountUsage.user">User</span></dt>
+          <dd>
+            <span>{{ discountUsageRef.user?.id }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/discount-usage', discountUsageRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

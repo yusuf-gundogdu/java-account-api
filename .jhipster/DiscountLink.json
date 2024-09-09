@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240909201817"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discountAmount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "accountedPrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "DiscountLink",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "discountUsage",
+      "relationshipName": "discountUsage",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "company",
+      "relationshipName": "company",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,27 @@
+{
+  "jhtestApp": {
+    "userRating": {
+      "home": {
+        "title": "User Ratings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Rating",
+        "createOrEditLabel": "Create or edit a User Rating",
+        "notFound": "No User Ratings found"
+      },
+      "created": "A new User Rating is created with identifier {{ param }}",
+      "updated": "A User Rating is updated with identifier {{ param }}",
+      "deleted": "A User Rating is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Rating {{ id }}?"
+      },
+      "detail": {
+        "title": "User Rating"
+      },
+      "id": "Id",
+      "rating": "Rating",
+      "reviewDate": "Review Date",
+      "user": "User",
+      "company": "Company"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (discountLink(); as discountLinkRef) {
+      <div>
+        <h2 data-cy="discountLinkDetailsHeading"><span jhiTranslate="jhtestApp.discountLink.detail.title">Discount Link</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="jhtestApp.discountLink.id">Id</span></dt>
+          <dd>
+            <span>{{ discountLinkRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountLink.discountAmount">Discount Amount</span></dt>
+          <dd>
+            <span>{{ discountLinkRef.discountAmount }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountLink.accountedPrice">Accounted Price</span></dt>
+          <dd>
+            <span>{{ discountLinkRef.accountedPrice }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountLink.date">Date</span></dt>
+          <dd>
+            <span>{{ discountLinkRef.date | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountLink.discountUsage">Discount Usage</span></dt>
+          <dd>
+            @if (discountLink()!.discountUsage) {
+              <div>
+                <a [routerLink]="['/discount-usage', discountLink()!.discountUsage?.id, 'view']">{{ discountLinkRef.discountUsage?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="jhtestApp.discountLink.company">Company</span></dt>
+          <dd>
+            @if (discountLink()!.company) {
+              <div>
+                <a [routerLink]="['/company', discountLink()!.company?.id, 'view']">{{ discountLinkRef.company?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/discount-link', discountLinkRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,24 @@
+@if (userRating) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(userRating.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="userRatingDeleteDialogHeading" jhiTranslate="entity.delete.title">Confirm delete operation</h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p id="jhi-delete-userRating-heading" jhiTranslate="jhtestApp.userRating.delete.question" [translateValues]="{ id: userRating.id }">
+        Are you sure you want to delete User Rating {{ userRating.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+      </button>
+
+      <button id="jhi-confirm-delete-userRating" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Delete</span>
+      </button>
+    </div>
+  </form>
+}

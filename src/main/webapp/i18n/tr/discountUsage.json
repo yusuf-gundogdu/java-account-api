@@ -1,0 +1,26 @@
+{
+  "jhtestApp": {
+    "discountUsage": {
+      "home": {
+        "title": "Discount Usages",
+        "refreshListLabel": "Listeyi yenile",
+        "createLabel": "Yeni Discount Usage ekle",
+        "createOrEditLabel": "Yeni Discount Usage ekle veya guncelle",
+        "notFound": "Discount Usages kaydi bulunamadi"
+      },
+      "created": "{{ param }} ID ile bir Discount Usage eklendi",
+      "updated": "{{ param }} nolu Discount Usage guncellendi",
+      "deleted": "{{ param }} nolu Discount Usage silindi",
+      "delete": {
+        "question": "{{ id }} nolu Discount Usage silinecek. Devem etmek istiyor musunuz?"
+      },
+      "detail": {
+        "title": "Discount Usage"
+      },
+      "id": "Id",
+      "usageDate": "Usage Date",
+      "totalDiscountAmount": "Total Discount Amount",
+      "user": "User"
+    }
+  }
+}

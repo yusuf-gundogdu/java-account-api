@@ -1,0 +1,28 @@
+{
+  "jhtestApp": {
+    "discountLink": {
+      "home": {
+        "title": "Discount Links",
+        "refreshListLabel": "Listeyi yenile",
+        "createLabel": "Yeni Discount Link ekle",
+        "createOrEditLabel": "Yeni Discount Link ekle veya guncelle",
+        "notFound": "Discount Links kaydi bulunamadi"
+      },
+      "created": "{{ param }} ID ile bir Discount Link eklendi",
+      "updated": "{{ param }} nolu Discount Link guncellendi",
+      "deleted": "{{ param }} nolu Discount Link silindi",
+      "delete": {
+        "question": "{{ id }} nolu Discount Link silinecek. Devem etmek istiyor musunuz?"
+      },
+      "detail": {
+        "title": "Discount Link"
+      },
+      "id": "Id",
+      "discountAmount": "Discount Amount",
+      "accountedPrice": "Accounted Price",
+      "date": "Date",
+      "discountUsage": "Discount Usage",
+      "company": "Company"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20240909201816"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "usageDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "totalDiscountAmount",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "DiscountUsage",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

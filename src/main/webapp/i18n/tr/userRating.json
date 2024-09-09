@@ -1,0 +1,27 @@
+{
+  "jhtestApp": {
+    "userRating": {
+      "home": {
+        "title": "User Ratings",
+        "refreshListLabel": "Listeyi yenile",
+        "createLabel": "Yeni User Rating ekle",
+        "createOrEditLabel": "Yeni User Rating ekle veya guncelle",
+        "notFound": "User Ratings kaydi bulunamadi"
+      },
+      "created": "{{ param }} ID ile bir User Rating eklendi",
+      "updated": "{{ param }} nolu User Rating guncellendi",
+      "deleted": "{{ param }} nolu User Rating silindi",
+      "delete": {
+        "question": "{{ id }} nolu User Rating silinecek. Devem etmek istiyor musunuz?"
+      },
+      "detail": {
+        "title": "User Rating"
+      },
+      "id": "Id",
+      "rating": "Rating",
+      "reviewDate": "Review Date",
+      "user": "User",
+      "company": "Company"
+    }
+  }
+}
